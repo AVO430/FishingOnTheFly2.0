@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Operation Rolling Thunder 4.0</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Achevements">Achevements</string>
+    <string name="Settings">Settings</string>
+    <string name="Home">Home</string>
+    <string name="fishing_on_the_fly">Fishing on the Fly</string>
+    <string name="Test">Test</string>
+    <string name="Explore">Explore</string>
+
+</resources>

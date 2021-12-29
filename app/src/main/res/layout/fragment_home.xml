@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/montana"
+    android:textAlignment="textEnd"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+
+            android:id="@+id/txtTitle"
+            android:layout_width="226dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="16dp"
+            android:background="#CC000000"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="@string/fishing_on_the_fly"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextRiverName"
+            android:layout_width="264dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="41dp"
+            android:background="#CC000000"
+            android:gravity="left|center_vertical"
+            android:inputType="textPersonName"
+            android:text="Search Rivers"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+            app:layout_constraintEnd_toStartOf="@+id/btnSearch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageButton
+            android:id="@+id/btnSearch"
+            android:layout_width="97dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="#CC000000"
+            android:src="@android:drawable/ic_menu_search"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/editTextRiverName"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="405dp"
+            android:layout_height="470dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtStockedRivers"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="#CC000000"
+                    android:gravity="center"
+                    android:text="Stocked Rivers"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:background="#CC000000" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
